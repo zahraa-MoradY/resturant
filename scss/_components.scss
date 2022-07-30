@@ -1,0 +1,25 @@
+// .reserve-forminput {
+//   @include forminput(30%, $whiteColor);
+// }
+// .Btn {
+//   @include forminput(180px, $whiteColor);
+//   // background-color: $BrandColor;
+// }
+@mixin buttons($width) {
+  color: $blackColor;
+  height: 48px;
+  width: $width;
+  font-size: 18px;
+  background-color: $BrandColor;
+  @include flex;
+  @extend %flexCenter;
+}
+.largeBtn {
+  @include buttons(50%);
+}
+.mediumBtn {
+  @include buttons(200px);
+}
+.smallBtn {
+  @include buttons(120px);
+}
