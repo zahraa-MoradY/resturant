@@ -46,3 +46,100 @@
   z-index: 4;
   background-color: transparentize($color: $blackColor, $amount: 0.6);
 }
+@mixin bannerCta($width) {
+  z-index: 1;
+  position: relative;
+  border: 5px solid $whiteColor;
+  border-bottom: none;
+  height: 100%;
+  width: $width;
+  color: $whiteColor;
+  background-color: transparentize($color: $blackColor, $amount: 0.2);
+  &::before {
+    content: "";
+    height: 5px;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    background-color: $whiteColor;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    height: 5px;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    background-color: $whiteColor;
+    right: 0;
+  }
+
+  .cta {
+    position: absolute;
+    bottom: -24px;
+    left: 25%;
+  }
+}
+// reservation form
+form {
+  width: 90%;
+  margin: 45px 0;
+  .form-group-1 > .form-field {
+    width: 45%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .form-group-2 {
+    .form-field:nth-child(even) {
+      width: 40%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    .form-field:nth-child(odd) {
+      width: 25%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+// input triangle icon
+#date {
+  position: relative;
+  &::-webkit-calendar-picker-indicator {
+    background: none;
+    z-index: 1;
+  }
+
+  &::before {
+    content: url("../img/akar-icons_chevron-down.png");
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+}
+#time {
+  background-image: url("../img/akar-icons_chevron-down.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent url(../img/akar-icons_chevron-down.png) no-repeat 100%
+    center;
+  option {
+    background-color: $blackColor;
+  }
+}
+// @media screen and (max-width: 768px) {
+//   .form-field {
+//     width: 100%;
+//   }
+// }

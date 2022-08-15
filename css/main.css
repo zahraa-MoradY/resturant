@@ -39,11 +39,11 @@ button {
   outline: none;
 }
 
-.place-section .main-content .photos, .place-section .main-content, .menu-section .main-content .menu, .menu-section .main-content, .story-section .story-content .grid-images-col1, .story-section .story-content .grid-images, .story-section .story-content, .header .headercontainer .nav .list-Items, .header .headercontainer .nav .res-menu {
+.place-section .main-content .photos, .place-section .main-content, .menu-section .main-content .menu, .menu-section .main-content, .story-section .story-content .grid-images-col1, .story-section .story-content .grid-images, .story-section .story-content, .header .headercontainer .nav .list-Items, .header .headercontainer .nav .res-menu, .form-group {
   justify-content: space-between;
 }
 
-.menu-section .main-content .menu .menu-detail .food-detail, .header .headercontainer .banner .bannerCta .text, .header .headercontainer .banner, .header .headercontainer .nav, .smallBtn, .mediumBtn, .largeBtn, .section {
+.reservation-section .banner .bannerCta, .reservation-section .banner, .menu-section .main-content .menu .menu-detail .food-detail, .header .headercontainer .banner .bannerCta .text, .header .headercontainer .banner, .header .headercontainer .nav, .smallBtn, .mediumBtn, .largeBtn, .section {
   justify-content: center;
 }
 
@@ -87,6 +87,27 @@ h2 {
     font-size: 15px;
   }
 }
+.form-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+input,
+select {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+}
+input:focus, input:focus-visible,
+select:focus,
+select:focus-visible {
+  outline: none;
+}
+
 .largeBtn {
   color: #000000;
   height: 48px;
@@ -118,6 +139,68 @@ h2 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+form {
+  width: 90%;
+  margin: 45px 0;
+}
+form .form-group-1 > .form-field {
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  form .form-group-1 > .form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+form .form-group-2 .form-field:nth-child(even) {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  form .form-group-2 .form-field:nth-child(even) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+form .form-group-2 .form-field:nth-child(odd) {
+  width: 25%;
+}
+@media screen and (max-width: 768px) {
+  form .form-group-2 .form-field:nth-child(odd) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+#date {
+  position: relative;
+}
+#date::-webkit-calendar-picker-indicator {
+  background: none;
+  z-index: 1;
+}
+#date::before {
+  content: url("../img/akar-icons_chevron-down.png");
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+#time {
+  background-image: url("../img/akar-icons_chevron-down.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent url(../img/akar-icons_chevron-down.png) no-repeat 100% center;
+}
+select option {
+  background-color: #000000;
 }
 
 .header {
@@ -210,13 +293,13 @@ h2 {
 .header .headercontainer .banner .bannerCta {
   z-index: 1;
   position: relative;
-  margin-top: 75px;
   border: 5px solid #ffffff;
   border-bottom: none;
   height: 100%;
   width: 50%;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 75px;
 }
 .header .headercontainer .banner .bannerCta::before {
   content: "";
@@ -235,6 +318,11 @@ h2 {
   bottom: 0;
   background-color: #ffffff;
   right: 0;
+}
+.header .headercontainer .banner .bannerCta .cta {
+  position: absolute;
+  bottom: -24px;
+  left: 25%;
 }
 .header .headercontainer .banner .bannerCta h1 {
   text-align: center;
@@ -257,11 +345,6 @@ h2 {
 .header .headercontainer .banner .bannerCta .text p {
   text-align: center;
   white-space: pre-line;
-}
-.header .headercontainer .banner .bannerCta .cta {
-  position: absolute;
-  bottom: -24px;
-  left: 25%;
 }
 @media screen and (max-width: 768px) {
   .header .headercontainer .banner .bannerCta {
@@ -426,7 +509,7 @@ h2 {
 }
 .menu-section .main-content .menu .menu-detail .food-detail {
   width: 100%;
-  line-height: 50px;
+  line-height: 100px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -543,7 +626,7 @@ h2 {
 .gallery-section .main-content {
   height: 90%;
   width: 80%;
-  position: absolute;
+  position: relative;
   top: 5%;
   left: 10%;
   z-index: 10;
@@ -592,4 +675,51 @@ h2 {
     grid-template: repeat(4, 1fr)/repeat(2, 1fr);
     grid-template-areas: "ph1 ph2" "ph1 ph3" "ph4 ph5" "ph4 ph6";
   }
+}
+
+.reservation-section {
+  min-height: 550px;
+}
+.reservation-section .banner {
+  width: 100%;
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.reservation-section .banner .bannerCta {
+  z-index: 1;
+  position: relative;
+  border: 5px solid #ffffff;
+  border-bottom: none;
+  height: 100%;
+  width: 80%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.reservation-section .banner .bannerCta::before {
+  content: "";
+  height: 5px;
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+  left: 0;
+}
+.reservation-section .banner .bannerCta::after {
+  content: "";
+  height: 5px;
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+  right: 0;
+}
+.reservation-section .banner .bannerCta .cta {
+  position: absolute;
+  bottom: -24px;
+  left: 25%;
 }/*# sourceMappingURL=main.css.map */

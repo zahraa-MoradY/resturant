@@ -104,3 +104,22 @@ h2 {
     font-size: 15px;
   }
 }
+// form & inputs
+.form-group {
+  @include flex;
+  @extend %flexBetween;
+  margin-bottom: 30px;
+}
+input,
+select {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}

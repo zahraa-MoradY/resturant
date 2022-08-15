@@ -80,35 +80,10 @@
       height: 270px;
       @include flex;
       @extend %flexCenter;
-
       .bannerCta {
-        z-index: 1;
-        position: relative;
+        @include bannerCta(50%);
+
         margin-top: 75px;
-        border: 5px solid $whiteColor;
-        border-bottom: none;
-        height: 100%;
-        width: 50%;
-        color: $whiteColor;
-        background-color: transparentize($color: $blackColor, $amount: 0.2);
-        &::before {
-          content: "";
-          height: 5px;
-          width: 20%;
-          position: absolute;
-          bottom: 0;
-          background-color: $whiteColor;
-          left: 0;
-        }
-        &::after {
-          content: "";
-          height: 5px;
-          width: 20%;
-          position: absolute;
-          bottom: 0;
-          background-color: $whiteColor;
-          right: 0;
-        }
         h1 {
           text-align: center;
           font-size: 6rem;
@@ -130,11 +105,6 @@
             white-space: pre-line;
           }
         }
-        .cta {
-          position: absolute;
-          bottom: -24px;
-          left: 25%;
-        }
 
         @media screen and(max-width:768px) {
           width: 75%;
@@ -143,6 +113,7 @@
     }
   }
 }
+
 .story-section {
   min-height: 650px;
 
@@ -267,7 +238,7 @@
         }
         .food-detail {
           width: 100%;
-          line-height: 50px;
+          line-height: 100px;
           @include flex;
           @extend %flexCenter;
         }
@@ -392,7 +363,7 @@
   .main-content {
     height: 90%;
     width: 80%;
-    position: absolute;
+    position: relative;
     top: 5%;
     left: 10%;
     z-index: 10;
@@ -438,6 +409,22 @@
           grid-template-areas: "ph1 ph2" "ph1 ph3" "ph4 ph5" "ph4 ph6";
         }
       }
+    }
+  }
+}
+.reservation-section {
+  min-height: 550px;
+  .banner {
+    width: 100%;
+    min-height: 270px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @extend %flexCenter;
+    .bannerCta {
+      @include bannerCta(80%);
+      @include flex;
+      @extend %flexCenter;
     }
   }
 }

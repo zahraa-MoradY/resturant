@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script defer src="js/menu.js"></script>
+    <script defer src="js/localDate.js"></script>
     <title>Document</title>
 </head>
 
@@ -159,6 +160,33 @@
                             <div class="photo photo5"><img src="img/gallery05.png" alt=""></div>
                             <div class="photo photo6"><img src="img/gallery06.png" alt=""></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section reservation-section">
+            <div class="container">
+                <div class="banner">
+                    <div class="bannerCta">
+                        <h2 class="mediumtitle">Reservation</h2>
+                        <form action="">
+                            <div class="form-group form-group-1">
+                                <input class="form-field" type="text" name="firstName" id="" placeholder="Your Name">
+                                <input class="form-field" type="tel" name="phoneNumber" id="" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group form-group-2">
+                                <select class="form-field" name="costumer" id="costumer-select">
+                                    <option value="person" selected>person</option>
+                                    <option value="company">company</option>
+                                    <option value="hospital">hospital</option>
+                                </select>
+                                <input class="form-field" type="date" name="phoneNumber" id="date">
+                                <input class="form-field" type="text" id='time' placeholder="Time" step="900"
+                                    onfocus="this.type='time'">
+                            </div>
+
+                        </form>
+                        <button class="cta largeBtn">Book A Table</button>
                     </div>
                 </div>
             </div>
