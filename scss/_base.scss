@@ -72,6 +72,7 @@ button {
 h2 {
   font-weight: 400;
 }
+
 .mediumtitle {
   font-family: $Italiannofont;
   font-size: 3rem;
@@ -98,7 +99,11 @@ h2 {
   grid-template-rows: repeat($Row, 1fr);
   grid-template-columns: repeat($Col, 1fr);
 }
-
+@media screen and (max-width: 990px) {
+  .largetitle {
+    font-size: 4rem;
+  }
+}
 @media screen and(max-width:540px) {
   * {
     font-size: 15px;

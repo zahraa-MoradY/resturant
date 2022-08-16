@@ -255,9 +255,6 @@
       .title {
         text-align: center;
         width: 80%;
-        .largetitle {
-          font-size: 4rem;
-        }
       }
       .menu {
         width: 100%;
@@ -301,12 +298,6 @@
         &:nth-of-type(3) {
           margin-top: 200px;
         }
-        // &.imgContainer2 img {
-        //   margin-top: 10%;
-        // }
-        // &.imgContainer3 img {
-        //   margin-top: 20%;
-        // }
       }
     }
 
@@ -425,6 +416,41 @@
       @include bannerCta(80%);
       @include flex;
       @extend %flexCenter;
+    }
+  }
+}
+.footer {
+  min-height: 200px;
+  &-content {
+    &-top {
+      @include flex;
+      @extend %flexBetween;
+      .logo {
+        width: 30%;
+      }
+      .footer-nav {
+        width: 65%;
+        @include flex;
+        @extend %flexBetween;
+        a {
+          margin: 0 10px;
+          line-height: 30px;
+        }
+      }
+      @media screen and(max-width:768px) {
+        justify-content: center;
+
+        .footer-nav {
+          margin: 40px 0;
+          width: 100%;
+        }
+      }
+    }
+    &-bottom {
+      margin: 20px auto;
+      p {
+        text-align: center;
+      }
     }
   }
 }
