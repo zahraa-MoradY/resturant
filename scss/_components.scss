@@ -55,24 +55,6 @@
   width: $width;
   color: $whiteColor;
   background-color: transparentize($color: $blackColor, $amount: 0.2);
-  &::before {
-    content: "";
-    height: 5px;
-    width: 20%;
-    position: absolute;
-    bottom: 0;
-    background-color: $whiteColor;
-    left: 0;
-  }
-  &::after {
-    content: "";
-    height: 5px;
-    width: 20%;
-    position: absolute;
-    bottom: 0;
-    background-color: $whiteColor;
-    right: 0;
-  }
 
   .cta {
     position: absolute;
@@ -136,5 +118,23 @@ select {
     center;
   option {
     background-color: $blackColor;
+  }
+}
+// menu page banner
+@mixin banner {
+  width: 100%;
+  height: 270px;
+  @include flex;
+  @extend %flexCenter;
+  .main-banner {
+    @include bannerCta(50%);
+    @media screen and(max-width:440px) {
+      width: 80%;
+    }
+    border-bottom: 5px solid $whiteColor;
+
+    p {
+      @include textCenter;
+    }
   }
 }

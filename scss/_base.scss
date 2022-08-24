@@ -72,16 +72,38 @@ button {
 h2 {
   font-weight: 400;
 }
-
+@mixin textCenter {
+  text-align: center;
+  white-space: pre-line;
+}
+.preLine {
+  white-space: pre-line;
+}
 .mediumtitle {
   font-family: $Italiannofont;
   font-size: 3rem;
+}
+.small-title {
+  font-family: $Italiannofont;
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 .section {
   width: 100%;
   padding: 50px 0 0;
   @include flex;
   @extend %flexCenter;
+}
+.bannerTitle {
+  text-align: center;
+  font-size: 6rem;
+  font-family: $Italiannofont;
+  //   z-index: 2;
+  color: $whiteColor;
+  font-weight: 400;
+  @media screen and(max-width:768px) {
+    font-size: 4rem;
+  }
 }
 .largetitle {
   font-family: $Italiannofont;

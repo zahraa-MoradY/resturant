@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/localDate.js"></script>
+    <title>reservation</title>
+</head>
+
+<body>
+    <header class="header" id="reservation-header">
+        <div class="headercontainer">
+            <nav class="nav">
+                <div class="container">
+                    <div class="res-menu">
+                        <div class="res-logo">
+                            <img src="img/48 Cuisine.png" alt="logo">
+                        </div>
+                        <div class="menu-icon">
+                            <img src="img/NaviOpen.png" alt="">
+                        </div>
+                    </div>
+                    <ul class="list-Items">
+                        <li class="Item"><a href="index.html" class="link">welcome</a></li>
+                        <li class="Item"><a href="menu.html" class="link">Menu</a></li>
+                        <li class="Item"><a href="" class="link">Rservation</a></li>
+                        <li class="Item logo"><a href="index.html"><img src="img/48 Cuisine.png" alt="logo"></a></li>
+                        <li class="Item"><a href="#" class="link">About</a></li>
+                        <li class="Item"><a href="#" class="link">Contact Us</a></li>
+                        <li class="Item"><a href="#" class="link"><button class="smallBtn">Order Now</button></a></li>
+                    </ul>
+                </div>
+
+            </nav>
+            <div class="banner">
+                <div class="reservation-banner main-banner" id="reserv-banner">
+                    <h1 class="bannerTitle">Reservation</h1>
+                    <div class="text">
+                        <p>We have Chinese food, Japanese food,
+                            and Korean food</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+    <main>
+        <section class="section about-section">
+            <div class="container">
+                <div class="about-section-boxes">
+                    <div class="boxes-container">
+                        <div class="box">
+                            <div class="box-image">
+                                <img src="img/place.png" alt="resturantImage">
+                            </div>
+                            <div class="box-info">
+                                <h3 class="small-title">Individual</h3>
+                                <div class="detail">
+                                    <p class="preLine">48 Cuisine restaurant is a suitable
+                                        restaurant for private dinners,
+                                        romantic dinners, family gatherings,
+                                        and meetings.
+
+
+                                        Make your dinner more special with
+                                        our special restaurant menu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-image">
+                                <img src="img/place1.png" alt="resturantImage">
+                            </div>
+                            <div class="box-info">
+                                <h3 class="small-title">Company</h3>
+                                <div class="detail">
+                                    <p class="preLine">Our restaurant can be used for
+                                        corporate meetings with custom-
+                                        made decorations
+
+
+                                        Make your meetings more special
+                                        with our special restaurant menu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-image">
+                                <img src="img/place2.png" alt="resturantImage">
+                            </div>
+                            <div class="box-info">
+                                <h3 class="small-title">Group</h3>
+                                <div class="detail">
+                                    <p class="preLine">
+                                        Our restaurant has a large space
+                                        which can be used by about 40 to
+                                        150 people for community
+                                        activities, groups, weddings and
+                                        others.
+
+                                        We also have several special menus
+                                        that can be ordered for specific
+                                        events.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section reservation-section">
+            <div class="container">
+                <div class="banner">
+                    <div class="bannerCta">
+                        <h2 class="mediumtitle">Reservation</h2>
+                        <form action="">
+                            <div class="form-group form-group-1">
+                                <input class="form-field" type="text" name="firstName" id="" placeholder="Your Name">
+                                <input class="form-field" type="tel" name="phoneNumber" id="" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group form-group-2">
+                                <select class="form-field" name="costumer" id="costumer-select">
+                                    <option value="person" selected>person</option>
+                                    <option value="company">company</option>
+                                    <option value="hospital">hospital</option>
+                                </select>
+                                <input class="form-field" type="date" name="phoneNumber" id="date">
+                                <input class="form-field" type="text" id='time' placeholder="Time" step="900"
+                                    onfocus="this.type='time'">
+                            </div>
+
+                        </form>
+                        <button class="cta largeBtn">Book A Table</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="section footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content-top">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="img/48 Cuisine.png" alt="logo"></a>
+                    </div>
+                    <div class="footer-nav">
+                        <a href="#">Menu</a>
+                        <a href="#">Reservation</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Social Media</a>
+                    </div>
+                </div>
+                <div class="footer-content-bottom copy-right">
+                    <p>© 48 Cuisine Restaurant. All Rights Reserved. 2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
