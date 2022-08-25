@@ -76,8 +76,15 @@ h2 {
   text-align: center;
   white-space: pre-line;
 }
+.text-center {
+  text-align: center;
+}
 .preLine {
   white-space: pre-line;
+}
+.small-text {
+  font-size: 1.3rem;
+  font-weight: normal;
 }
 .mediumtitle {
   font-family: $Italiannofont;

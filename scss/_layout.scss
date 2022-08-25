@@ -668,3 +668,74 @@
     }
   }
 }
+.ourStory-section {
+  min-height: 800px;
+  .ourStory {
+    margin: 50px 0;
+    &-content {
+      width: 100%;
+      @include flex;
+      @extend %flexBetween;
+      &-text {
+        width: 55%;
+      }
+      &-image {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 990px) {
+        .ourStory-content-text {
+          p {
+            white-space: normal;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        .ourStory-content-text,
+        .ourStory-content-image {
+          width: 90%;
+        }
+        .ourStory-content-text {
+          margin-bottom: 40px;
+        }
+        .ourStory-content-text h2 {
+          white-space: normal;
+        }
+      }
+    }
+  }
+}
+.ourTeam-section {
+  .ourTeam {
+    margin-bottom: 50px;
+    .ourTeam-content {
+      width: 100%;
+      .Title {
+        margin-bottom: 50px;
+      }
+      .team-members {
+        @include flex;
+        @extend %flexBetween;
+        .team-member {
+          width: 22%;
+          img {
+            width: 100%;
+          }
+          .profile-detail {
+            margin: 10px 0;
+          }
+          @media screen and (max-width: 768px) {
+            width: 45%;
+            margin-bottom: 40px;
+          }
+          @media screen and (max-width: 440px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
