@@ -1,5 +1,7 @@
-.header {
+#mainpage-header {
   background: url(../img/image.png) no-repeat center;
+}
+.header {
   background-size: cover;
   height: 650px;
   width: 100%;
@@ -738,4 +740,42 @@
       }
     }
   }
+}
+#contactus-header {
+  height: unset;
+}
+.contact-section {
+  position: relative;
+  padding: 0;
+  height: 600px;
+  width: 100%;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .contact-info {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    background-color: $DarkColor;
+    left: 15%;
+    top: 10%;
+    @include flex;
+    @extend %flexCenter;
+    &-content {
+      width: 80%;
+      height: 80%;
+
+      .info {
+        margin-bottom: 25px;
+      }
+    }
+    @media screen and(max-width:768px) {
+      width: 65%;
+    }
+    @media screen and(max-width:768px) {
+      width: 75%;
+    }
+  }
+  //   background: url(https://goo.gl/maps/6RKeCbvfkNXjCBVf6);
 }

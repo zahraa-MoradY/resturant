@@ -43,7 +43,7 @@ button {
   justify-content: space-between;
 }
 
-.about-section .about-section-boxes .boxes-container .box .box-info .detail, .about-section .about-section-boxes, #reservation-header .banner, .desert-section .desert-list-items, .desert-banner-section .banner #desert-banner, .desert-banner-section .banner, .food-menu-section .food-menu-list-item, .food-menu-section .food-menu, #menu-header .banner, .reservation-section .banner .bannerCta, .reservation-section .banner, .menu-section .main-content .menu .menu-detail .food-detail, .header .headercontainer .banner #bannerCta .text, .header .headercontainer .banner, .header .headercontainer .nav, .smallBtn, .mediumBtn, .largeBtn, .section {
+.contact-section .contact-info, .about-section .about-section-boxes .boxes-container .box .box-info .detail, .about-section .about-section-boxes, #reservation-header .banner, .desert-section .desert-list-items, .desert-banner-section .banner #desert-banner, .desert-banner-section .banner, .food-menu-section .food-menu-list-item, .food-menu-section .food-menu, #menu-header .banner, .reservation-section .banner .bannerCta, .reservation-section .banner, .menu-section .main-content .menu .menu-detail .food-detail, .header .headercontainer .banner #bannerCta .text, .header .headercontainer .banner, .header .headercontainer .nav, .smallBtn, .mediumBtn, .largeBtn, .section {
   justify-content: center;
 }
 
@@ -240,8 +240,11 @@ select option {
   background-color: #000000;
 }
 
-.header {
+#mainpage-header {
   background: url(../img/image.png) no-repeat center;
+}
+
+.header {
   background-size: cover;
   height: 650px;
   width: 100%;
@@ -1156,5 +1159,48 @@ select option {
 @media screen and (max-width: 440px) {
   .ourTeam-section .ourTeam .ourTeam-content .team-members .team-member {
     width: 100%;
+  }
+}
+
+#contactus-header {
+  height: unset;
+}
+
+.contact-section {
+  position: relative;
+  padding: 0;
+  height: 600px;
+  width: 100%;
+}
+.contact-section iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-section .contact-info {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  background-color: #0e0c0f;
+  left: 15%;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact-section .contact-info-content {
+  width: 80%;
+  height: 80%;
+}
+.contact-section .contact-info-content .info {
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .contact-section .contact-info {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-section .contact-info {
+    width: 75%;
   }
 }/*# sourceMappingURL=main.css.map */
