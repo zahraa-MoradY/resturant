@@ -38,6 +38,7 @@ $Italiannofont: "Italianno", sans-serif;
 }
 body {
   background-color: $DarkColor;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -120,8 +121,9 @@ h2 {
   display: none;
 }
 .show {
-  opacity: 1;
+  display: flex;
 }
+
 @mixin gridTemplate($Row, $Col) {
   display: grid;
   gap: 20px;

@@ -23,6 +23,7 @@
 
 body {
   background-color: #0e0c0f;
+  position: relative;
 }
 
 a {
@@ -43,7 +44,7 @@ button {
   justify-content: space-between;
 }
 
-.contact-section .contact-info, .about-section .about-section-boxes .boxes-container .box .box-info .detail, .about-section .about-section-boxes, #reservation-header .banner, .desert-section .desert-list-items, .desert-banner-section .banner #desert-banner, .desert-banner-section .banner, .food-menu-section .food-menu-list-item, .food-menu-section .food-menu, #menu-header .banner, .reservation-section .banner .bannerCta, .reservation-section .banner, .menu-section .main-content .menu .menu-detail .food-detail, .header .headercontainer .banner #bannerCta .text, .header .headercontainer .banner, .header .headercontainer .nav, .smallBtn, .mediumBtn, .largeBtn, .section {
+.contact-section .contact-info, .about-section .about-section-boxes .boxes-container .box .box-info .detail, .about-section .about-section-boxes, #reservation-header .banner, .desert-section .desert-list-items, .desert-banner-section .banner #desert-banner, .desert-banner-section .banner, .food-menu-section .food-menu-list-item, .food-menu-section .food-menu, #menu-header .banner, .reservation-section .banner .bannerCta, .reservation-section .banner, .menu-section .main-content .menu .menu-detail .food-detail, .header .headercontainer .banner #bannerCta .text, .header .headercontainer .banner, .header .headercontainer .nav, .overLay, .smallBtn, .mediumBtn, .largeBtn, .section {
   justify-content: center;
 }
 
@@ -111,7 +112,7 @@ h2 {
 }
 
 .show {
-  opacity: 1;
+  display: flex;
 }
 
 @media screen and (max-width: 990px) {
@@ -238,6 +239,59 @@ select {
 }
 select option {
   background-color: #000000;
+}
+
+.overLay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  align-items: center;
+}
+.overLay.Openmodal .modal {
+  top: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, 150%);
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  opacity: 0;
+  flex-direction: column;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.modal p {
+  color: #0e0c0f;
+  margin-bottom: 20px;
+}
+.modal.active {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.modal.closemodal {
+  animation: modalIn reverse 0.6s;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 #mainpage-header {
@@ -1202,5 +1256,28 @@ select option {
 @media screen and (max-width: 768px) {
   .contact-section .contact-info {
     width: 75%;
+  }
+}
+
+.waitingAnimation {
+  position: fixed;
+  width: 34%;
+  border-radius: 10px;
+  top: 50%;
+  left: 33%;
+  z-index: 15;
+  overflow: hidden;
+}
+.waitingAnimation p {
+  color: #ffffff;
+  letter-spacing: 10px;
+  animation: waitingText 1.5s alternate infinite;
+}
+@keyframes waitingText {
+  from {
+    transform: translate3d(-250px, 0px, -135px);
+  }
+  to {
+    transform: translate3d(250px, 0px, 135px);
   }
 }/*# sourceMappingURL=main.css.map */

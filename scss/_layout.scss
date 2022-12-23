@@ -779,3 +779,27 @@
   }
   //   background: url(https://goo.gl/maps/6RKeCbvfkNXjCBVf6);
 }
+.waitingAnimation {
+  position: fixed;
+  width: 34%;
+  // height: 25px;
+  border-radius: 10px;
+  top: 50%;
+  left: 33%;
+  z-index: 15;
+  overflow: hidden;
+  p {
+    color: $whiteColor;
+    letter-spacing: 10px;
+    animation: waitingText 1.5s alternate infinite;
+  }
+  @keyframes waitingText {
+    from {
+      transform: translate3d(-250px, 0px, -135px);
+    }
+
+    to {
+      transform: translate3d(250px, 0px, 135px);
+    }
+  }
+}
